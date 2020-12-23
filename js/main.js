@@ -26,7 +26,7 @@ $.preload({
     setTimeout(function () {
       $('#loadingbg').fadeOut();
       // 入口ID
-      startSwiper('bluetooth2');
+      startSwiper('page1');
     }, 0);
   }
 });
