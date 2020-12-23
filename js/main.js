@@ -26,7 +26,7 @@ $.preload({
     setTimeout(function () {
       $('#loadingbg').fadeOut();
       // 入口ID
-      startSwiper('page1');
+      startSwiper('bluetooth2');
     }, 0);
   }
 });
@@ -98,13 +98,13 @@ function startSwiper(to, index) {
         },
         slideChangeTransitionEnd: function () {
           //每个slide切换结束时也运行当前slide动画
-          console.log('to => ', to, 'active index => ', this.activeIndex);
-          if (this.activeIndex === 1 && to === 'page1') {
+          // console.log('to => ', to, 'active index => ', this.activeIndex);
+          // if (this.activeIndex === 1 && to === 'page1') {
             // 播放gif
-            playXperia(this);
-          } else {
-            xperiaTimer && clearTimeout(xperiaTimer);
-          }
+          // playXperia(this);
+          // } else {
+          //   xperiaTimer && clearTimeout(xperiaTimer);
+          // }
           // 圣诞页，延缓雪花出现的时间
           if (productPage.includes(to) && this.activeIndex === 2) {
             setTimeout(function () {
@@ -252,6 +252,10 @@ productPage.forEach(pageId => {
   $(finalPage).clone(true).appendTo($($('.swiper-wrapper', `.swiper-${pageId}`)[0]));
 });
 
+// 将产品入口页追加到首屏的后面
+const finalPage = $('.swiper-slide', '#prod')[1];
+$(finalPage).clone(true).appendTo($($('.swiper-wrapper', `.swiper-page1`)[0]));
+
 // 分享图片
 let productType = '';
 $('.navishare').bind('click', function () {
@@ -260,7 +264,7 @@ $('.navishare').bind('click', function () {
 
   const product = $(this).data('product-type');
 
-  window.click_fx && window.click_fx(product);
+  click_fx && click_fx(product);
 
   productType = product;
   $('.share-container').addClass('index-up');

@@ -1,17 +1,24 @@
-// 当前页面域名
 var t_url = {
-  'A1_1': 'P32850870', //ilce_9m2.html
-  'A1_2': 'P43033968',//xperia_1m2_green.html
+  'A1_1': 'P32852226', //ilce_9m2.html
+  'A1_2': 'P43033969',//Xperia 1II 青山绿单机
   'A2_1': 'P92487205',//wh_1000xm4_b.html
-  'A2_2': 'P43033968',//xperia_1m2_green.html
-  'A3_1': 'P92487006', //wf_h800_l.html
-  'A3_2': 'P43033968',//xperia_1m2_green.html
-  'B1_1': 'P32850870', //ilce_9m2.html
-  'B1_2': 'P43040182', //xperia_5m2_pink
+  'A2_2': 'P43033969',//Xperia 1II 青山绿单机
+  'A3_1': 'P92487009', //wf_h800_l.html
+  'A3_2': 'P43033969',//Xperia 1II 青山绿单机
+  'B1_1': 'P32852226', //ilce_9m2.html
+  'B1_2': 'P43040181', //Xperia 5II 蓝
   'B2_1': 'P92487205',//wh_1000xm4_b.html
-  'B2_2': 'P43040182',//xperia_5m2_pink
-  'B3_1': 'P92487006', //wf_h800_l.html
-  'B3_2': 'P43040182'//xperia_5m2_pink
+  'B2_2': 'P43040181',//Xperia 5II 蓝
+  'B3_1': 'P92487009', //wf_h800_l.html
+  'B3_2': 'P43040181'//Xperia 5II 蓝
+};
+
+
+var click_fx = function (pid) {
+  if (window._dacq && _dacq.clink && pid) {
+    _dacq.clink('Christmas0-share-' + (pid || 'other'));
+  }
+  return !0;
 };
 
 var t_func = function (n) {
@@ -26,34 +33,34 @@ var t_func = function (n) {
 var BASE_URL = 'https://www.sonystyle.com.cn';
 var channel = '';
 
-function getUrlParam(name) {
+function getUrlParam (name) {
   var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)');
   var r = window.location.search.substr(1).match(reg);
   if (r != null) return unescape(r[2]);
   return null;
 }
 
-function isAndroid() {
+function isAndroid () {
   return /(Android)/i.test(navigator.userAgent);
 }
 
-function isApple() {
+function isApple () {
   return /(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent);
 }
 
-function isSony() {
+function isSony () {
   return /sonyapp/i.test(navigator.userAgent);
 }
 
-function isSonyAppwk() {
+function isSonyAppwk () {
   return /sonyapp_wkwebview/i.test(navigator.userAgent);
 }
 
-function isSonyApp() {
+function isSonyApp () {
   return isSony() || isSonyAppwk();
 }
 
-function urlDelP(url, name) {
+function urlDelP (url, name) {
   var urlArr = url.split('?');
   if (urlArr.length > 1 && urlArr[1].indexOf(name) > -1) {
     var query = urlArr[1];
@@ -74,7 +81,7 @@ function urlDelP(url, name) {
 }
 
 // 如果App进入-交互
-function connectWebViewJavascriptBridge(callback) {
+function connectWebViewJavascriptBridge (callback) {
 
   if (window.WebViewJavascriptBridge) {
 
@@ -86,7 +93,7 @@ function connectWebViewJavascriptBridge(callback) {
   }
 }
 
-function doAppAction(ed) {
+function doAppAction (ed) {
   try {
     if (isApple()) {
       if (isSonyAppwk()) {
@@ -122,7 +129,7 @@ if (isSonyApp()) {
 }
 // 一进入页面，给APP发送交互
 if (isSonyApp()) {
-  var getapp = { linktype: '27' };
+  var getapp = {linktype: '27'};
   doAppAction(getapp);
 }
 
@@ -138,7 +145,7 @@ if (isSonyApp()) {
 }
 
 
-function gotoLinks(links) {
+function gotoLinks (links) {
   var ua = window.navigator.userAgent.toLowerCase();
   if (ua.match(/MicroMessenger/i) == 'micromessenger') {
     window.location.href = window.location.origin + links;
@@ -153,64 +160,66 @@ function gotoLinks(links) {
 
     } else {
       //window.location.href=window.location.origin +"/content/dam/sonystyle-wechat/index.html#/Product?eightD=" +eds;
-      window.location.href = window.location.origin + links;
-
+      if (window.parent && window.parent.location.href != window.location.href) {
+        window.parent.location.href = window.location.origin + links;
+      } else {
+        window.location.href = window.location.origin + links;
+      }
     }
   }
 }
 
 var ww = $(window).width();
-function appendWxBtn(th, btns,imgsrc) {
 
-		var xhtml =' <wx-open-launch-weapp class="wxbtn"  username="gh_4cb3d4a90ee1" path="packageProduct/pages/product/product.html?eightd="'+btns+' style="width:100%;"><template><style>.wx-btn { width: 100%; display: block;}.buy_btn{ width: 100%; display: block;}</style><a href="#" class="buy_btn" style="display: block;width: 100%;"><img src='+imgsrc+' style="display: block;width: 100%;"></a></template></wx-open-launch-weapp>';
-	$(th).html(xhtml);
+function appendWxBtn (th, btns, imgsrc) {
+
+  var xhtml = ' <wx-open-launch-weapp class="wxbtn"  username="gh_4cb3d4a90ee1" path="packageProduct/pages/product/product.html?eightd="' + btns + ' style="width:100%;"><template><style>.wx-btn { width: 100%; display: block;}.buy_btn{ width: 100%; display: block;}</style><a href="#" class="buy_btn" style="display: block;width: 100%;"><img src=' + imgsrc + ' style="display: block;width: 100%;"></a></template></wx-open-launch-weapp>';
+  $(th).html(xhtml);
 }
 
-var filename=window.location.href;
-filename=filename.substr(0,filename.lastIndexOf("/")+1);
+var filename = window.location.href;
+filename = filename.substr(0, filename.lastIndexOf('/') + 1);
 
 var ua = window.navigator.userAgent.toLowerCase();
 if (ua.match(/MicroMessenger/i) == 'micromessenger') {
 
-	$(".pull-detail").each(function () {
-		var id = this.id;
-		var btns = $(this).dataset.productId;
-		if (id&&btns) {
-			appendWxBtn($(this),btns,$(this).find(".preload img").attr("src"));
-			var launchBtn = $(this).find(".wxbtn")[0];
-			launchBtn.addEventListener('launch', function (e) {
-				console.log('eee', e);
-			})
-			launchBtn.addEventListener('error', function (e) {
-				console.log('fail', e.detail)
-			})
-		}
-	})
+  $('.pull-detail').each(function () {
+    var id = this.id;
+    var btns = $(this).dataset.productId;
+    if (id && btns) {
+      appendWxBtn($(this), btns, $(this).find('.preload img').attr('src'));
+      var launchBtn = $(this).find('.wxbtn')[0];
+      launchBtn.addEventListener('launch', function (e) {
+        console.log('eee', e);
+      });
+      launchBtn.addEventListener('error', function (e) {
+        console.log('fail', e.detail);
+      });
+    }
+  });
 
-	$.ajax({
-		type: "POST",
-		url: "https://weixin.csmc-cloud.com/WechatAgencyDBC/JsApiConfig?uri=" + window.location.href.replace("&", "__").replace("&", "__").replace("&", "__"),
-		cache: false,
-		async: true,
-		success: function (configdata) {
-			var configresult = JSON.parse(configdata);
-			wx.config({
-				debug: false,
-				appId: configresult.appId,
-				timestamp: configresult.timestamp,
-				nonceStr: configresult.noncestr,
-				signature: configresult.signature,
-				jsApiList: ['onMenuShareAppMessage', 'onMenuShareTimeline', 'hideOptionMenu', 'showOptionMenu', 'chooseWXPay', 'getLocation', 'chooseImage', 'previewImage', 'uploadImage', 'downloadImage', 'hideMenuItems'],
-				openTagList: ['wx-open-launch-weapp']
-			});
-		}
-	});
+  $.ajax({
+    type: 'POST',
+    url: 'https://weixin.csmc-cloud.com/WechatAgencyDBC/JsApiConfig?uri=' + window.location.href.replace('&', '__').replace('&', '__').replace('&', '__'),
+    cache: false,
+    async: true,
+    success: function (configdata) {
+      var configresult = JSON.parse(configdata);
+      wx.config({
+        debug: false,
+        appId: configresult.appId,
+        timestamp: configresult.timestamp,
+        nonceStr: configresult.noncestr,
+        signature: configresult.signature,
+        jsApiList: ['onMenuShareAppMessage', 'onMenuShareTimeline', 'hideOptionMenu', 'showOptionMenu', 'chooseWXPay', 'getLocation', 'chooseImage', 'previewImage', 'uploadImage', 'downloadImage', 'hideMenuItems'],
+        openTagList: ['wx-open-launch-weapp']
+      });
+    }
+  });
 
-	wx.ready(function () {
+  wx.ready(function () {
 
-	});
-
-
+  });
 }
 
 
