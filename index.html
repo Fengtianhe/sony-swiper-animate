@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SONY</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="//assets.adobedtm.com/5dfda41d2da6/8686e5d52cbe/launch-f34fbfdd1478.min.js" async></script>
+</head>
+<body>
+<!--加载屏-->
+<div id="loadingbg" class="index-up">
+  <div class="logo">
+    <!--    <img src="images/logo.png" alt="">-->
+  </div>
+  <div id="loading" class="page-container">
+    <div class="percent-wrap">
+      <span class="percent">0</span><span class="unit">%</span>
+    </div>
+  </div>
+</div>
+
+<!--P1-->
+<div id="page1" class="page-container">
+  <div class="swiper-container swiper-page1">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="ani logo" swiper-animate-effect="fadeIn" swiper-animate-duration="1.2s"
+             swiper-animate-delay="0.5s">
+          <!--          <img src="images/logo.png" alt="">-->
+        </div>
+        <div class="ani page1bg wholepage" swiper-animate-effect="fadeIn" swiper-animate-duration="2s"
+             swiper-animate-delay="0.5s">
+          <img class="preload" src="images/page1-bg.png">
+        </div>
+        <div class="wholepage ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="3s"
+             swiper-animate-delay="1.5s">
+          <img class="preload" src="images/slogan.png">
+        </div>
+        <div class="ani pull-down">
+          <img class="preload" src="images/pull-down.gif">
+        </div>
+      </div>
+      <!--      -->
+      <div class="swiper-slide ">
+        <div class="page1bg wholepage">
+          <img class="preload" id="xperia" src="images/xperia.gif" style="display: none">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--产品入口-->
+<div id="prod" class="page-container">
+  <div class="swiper-container swiper-prod">
+    <div class="swiper-wrapper">
+      <!--   空白页    -->
+      <div class="swiper-slide"></div>
+      <div class="swiper-slide swiper-no-swiping">
+        <div class="ani logo" swiper-animate-effect="fadeIn" swiper-animate-duration="0.1s"
+             swiper-animate-delay="3s">
+          <!--          <img src="images/logo.png" alt="">-->
+        </div>
+        <div class="ani  wholepage" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s"
+             swiper-animate-delay="0s">
+          <img class="preload" src="images/guangxian.png">
+        </div>
+        <div class="ani  wholepage" swiper-animate-effect="fadeInUp" swiper-animate-duration="2s"
+             swiper-animate-delay="0.5s">
+          <img class="preload" src="images/guangban.png">
+        </div>
+        <div class="ani  wholepage" swiper-animate-effect="fadeInDown" swiper-animate-duration="2s"
+             swiper-animate-delay="0.3s">
+          <img class="preload" src="images/guangban-left.png">
+        </div>
+        <div class="ani xperia-back wholepage" swiper-animate-effect="slideInUp" swiper-animate-duration="1.2s"
+             swiper-animate-delay="1.3s">
+          <img class="preload" src="images/xperia-back.png" alt="">
+        </div>
+        <div class="ani wave wholepage" swiper-animate-effect="fadeIn" swiper-animate-duration="2.5s"
+             swiper-animate-delay="2.8s">
+          <img class="preload" src="images/wave.png">
+        </div>
+        <div class="ani xperia-front wholepage" swiper-animate-effect="slideInDown" swiper-animate-duration="1.2s"
+             swiper-animate-delay="1.3s">
+          <img class="preload" src="images/xperia-front.png" alt="">
+        </div>
+        <div class="ani wholepage" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s"
+             swiper-animate-delay="5s">
+          <img class="preload" src="images/xperia-jieshao.png" alt="">
+        </div>
+        <div class="ani click click1 to-product" swiper-animate-effect="fadeIn" swiper-animate-duration="0.1s"
+             swiper-animate-delay="5s" data-product-no="1">
+          <img class="preload click-image"
+               src="data:image/png;base64,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"
+               alt="">
+          <span>点击你的专属装备</span>
+        </div>
+        <div class="ani click click2 to-product" swiper-animate-effect="fadeIn" swiper-animate-duration="0.1s"
+             swiper-animate-delay="5s" data-product-no="2">
+          <img class="preload click-image"
+               src="data:image/png;base64,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"
+               alt="">
+          <span>点击你的专属装备</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--产品1-->
+<div id="product1" class="page-container">
+  <div class="swiper-container swiper-product1">
+    <div class="swiper-wrapper">
+      <!--   空白页    -->
+      <div class="swiper-slide"></div>
+      <!--      -->
+      <div class="swiper-slide swiper-no-swiping">
+        <div class="ani page1bg1 wholepage" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s"
+             swiper-animate-delay="0s">
+          <img class="preload" src="images/product1-bg.png" alt="">
+        </div>
+        <div class="ani wholepage" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s"
+             swiper-animate-delay="1.5s">
+          <img class="preload" src="images/product1-bluetooth.png" alt="">
+        </div>
+        <div class="ani wholepage" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s"
+             swiper-animate-delay="1.5s">
+          <img class="preload" src="images/product1-camarax.png">
+        </div>
+        <div class="ani wholepage" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s"
+             swiper-animate-delay="0.5s">
+          <img class="preload" src="images/product1-earphone.png">
+        </div>
+        <div class="ani wholepage" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s"
+             swiper-animate-delay="0.5s">
+          <img class="preload" src="images/product1-camera.png">
+        </div>
+        <div class="ani tip" swiper-animate-effect="fadeIn" swiper-animate-duration="1s"
+             swiper-animate-delay="2.5s" data-product-no="1">
+          点击激活
+        </div>
+        <div class="ani wholepage phone-light-c" style="display: none">
+          <img class="preload " src="images/product1-phone-light.png">
+        </div>
+        <div class="ani wholepage phone-light" swiper-animate-effect="fadeIn" swiper-animate-duration="1s"
+             swiper-animate-delay="2.5s" data-product-no="1" style="z-index: 2">
+          <img class="preload phone-border" src="images/product1-phone.png">
+        </div>
+        <div class="ani page2bg1colorful wholepage" style="display: none">
+          <img class="preload" src="images/product1-bgc.png" alt="">
+        </div>
+        <div class="ani producttext wholepage" style="display: none">
+          <img class="preload" src="images/product1-text.png" alt="">
+        </div>
+        <!--    耳机    -->
+        <div class="ani click click-earphone"
+             style="display: none; top: 20%; left: 10%"
+             data-product-no="1">
+          <img class="preload click-image"
+               src="data:image/png;base64,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"
+               data-product-no="1">
+        </div>
+        <!--    手机    -->
+        <div class="ani click click-phone "
+             style="display: none; top: 32%; left: 57%"
+             data-product-no="1">
+          <img class="preload"
+               src="images/pull-play.png"
+               data-product-no="1">
+        </div>
+        <!--    蓝牙    -->
+        <div class="ani click click-bluetooth"
+             style="display: none; top: 53%; left: 69%"
+             data-product-no="1">
+          <img class="preload click-image"
+               src="data:image/png;base64,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"
+               data-product-no="1">
+        </div>
+        <!--    相机    -->
+        <div class="ani click click-camera"
+             style="display: none; top: 84%; left: 6%"
+             data-product-no="1">
+          <img class="preload click-image"
+               src="data:image/png;base64,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"
+               data-product-no="1">
+        </div>
+        <!--    返回按钮    -->
+        <div class="ani logo" swiper-animate-effect="fadeIn" swiper-animate-duration="0.1s"
+             swiper-animate-delay="1.5s" style="z-index: 3">
+          <img src="images/pull-left.png" alt="" class="preload naviback">
+          <!--          <img src="images/logo.png" alt="" class="preload">-->
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--产品2-->
+<div id="product2" class="page-container">
+  <div class="swiper-container swiper-product2">
+    <div class="swiper-wrapper">
+      <!--   空白页    -->
+      <div class="swiper-slide"></div>
+      <!--      -->
+      <div class="swiper-slide swiper-no-swiping">
+        <div class="ani page1bg1 wholepage" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s"
+             swiper-animate-delay="0s">
+          <img class="preload" src="images/product2-bg.png" alt="">
+        </div>
+        <div class="ani wholepage" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s"
+             swiper-animate-delay="1.5s">
+          <img class="preload" src="images/product2-bluetooth.png" alt="">
+        </div>
+        <div class="ani wholepage" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s"
+             swiper-animate-delay="1.5s">
+          <img class="preload" src="images/product2-camerax.png">
+        </div>
+        <div class="ani wholepage" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s"
+             swiper-animate-delay="0.5s">
+          <img class="preload" src="images/product2-earphone.png">
+        </div>
+        <div class="ani wholepage" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s"
+             swiper-animate-delay="0.5s">
+          <img class="preload" src="images/product2-camera.png">
+        </div>
+        <div class="ani tip" swiper-animate-effect="fadeIn" swiper-animate-duration="1s"
+             swiper-animate-delay="2.5s" data-product-no="1">
+          点击激活
+        </div>
+        <div class="ani wholepage phone-light-c" style="display: none">
+          <img class="preload" src="images/product2-phone-light.png">
+        </div>
+        <div class="ani wholepage phone-light" swiper-animate-effect="fadeIn" swiper-animate-duration="1s"
+             swiper-animate-delay="2.5s" data-product-no="2" style="z-index: 2">
+          <img class="preload" src="images/product2-phone.png">
+        </div>
+        <div class="ani page2bg1colorful wholepage" style="display: none">
+          <img class="preload" src="images/product2-bgc.png" alt="">
+        </div>
+        <div class="ani producttext wholepage" style="display: none">
+          <img class="preload" src="images/product1-text.png" alt="">
+        </div>
+
+        <!--    相机    -->
+        <div class="ani click  click-camera"
+             style="display: none; top: 17%; left: 11%;"
+             data-product-no="2">
+          <img class="preload click-image"
+               src="data:image/png;base64,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"
+               data-product-no="2">
+        </div>
+        <!--    手机    -->
+        <div class="ani click click-phone pull-play"
+             style="display: none; top: 34%; left: 55%;"
+             data-product-no="2">
+          <img class="preload"
+               src="images/pull-play.png"
+               data-product-no="2">
+        </div>
+        <!--    蓝牙    -->
+        <div class="ani click click-bluetooth"
+             style="display: none; top: 52%; left: 68%;"
+             data-product-no="2">
+          <img class="preload click-image"
+               src="data:image/png;base64,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"
+               data-product-no="2">
+        </div>
+        <!--    耳机    -->
+        <div class="ani click click-earphone"
+             style="display: none; top: 85%; left: 11%;"
+             data-product-no="2">
+          <img class="preload click-image"
+               src="data:image/png;base64,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"
+               data-product-no="2">
+        </div>
+        <!--     返回按钮     -->
+        <div class="ani logo" swiper-animate-effect="fadeIn" swiper-animate-duration="0.1s"
+             swiper-animate-delay="1.5s" style="z-index: 3">
+          <img src="images/pull-left.png" alt="" class="preload naviback">
+          <!--          <img src="images/logo.png" alt="" class="preload">-->
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--微单1-->
+<div id="camera1" class="page-container">
+  <div class="swiper-container swiper-camera1">
+    <div class="swiper-wrapper">
+      <!--   空白页    -->
+      <div class="swiper-slide"></div>
+      <!--   索尼微单   -->
+      <div class="swiper-slide">
+        <div class="ani logo" swiper-animate-effect="fadeIn" swiper-animate-duration="0.1s"
+             swiper-animate-delay="1.5s">
+          <img src="images/pull-left.png" alt="" class="preload naviclose" data-close-to="product1">
+          <!--          <img src="images/logo.png" alt="" class="preload">-->
+          <img src="images/pull-share.png" alt="" class="preload navishare" data-product-type="camera1">
+        </div>
+        <div class="ani page2bg1 wholepage" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s"
+             swiper-animate-delay="0.5s">
+          <img class="preload" src="images/camera-bg.png" alt="">
+        </div>
+        <div class="ani page2bg1 wholepage" swiper-animate-effect="slideInRight" swiper-animate-duration="0.5s"
+             swiper-animate-delay="1s">
+          <img class="preload" src="images/camera-phone.png" alt="">
+        </div>
+        <div class="ani page2bg1 wholepage" swiper-animate-effect="slideInLeft" swiper-animate-duration="0.5s"
+             swiper-animate-delay="1s">
+          <img class="preload" src="images/camera-camera.png" alt="">
+        </div>
+        <div class="ani page2bg1 wholepage" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s"
+             swiper-animate-delay="1s">
+          <img class="preload" src="images/camera-product.png" alt="">
+        </div>
+        <div class="ani cameraslogan wholepage" swiper-animate-effect="slideInRight" swiper-animate-duration="1.5s"
+             swiper-animate-delay="1.5s">
+          <img class="preload" src="images/camera-text.png" alt="">
+        </div>
+        <div class="ani pull-detail" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s"
+             swiper-animate-delay="3s" style="top: 33%;left: 10%;" data-product-id="A1_1">
+          <img class="preload" src="images/pull-detail.png" alt="">
+        </div>
+        <div class="ani pull-detail" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s"
+             swiper-animate-delay="3s" style="top: 68%;left: 28%;" data-product-id="A1_2">
+          <img class="preload" src="images/pull-detail.png" alt="">
+        </div>
+        <div class="ani pull-view" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s"
+             swiper-animate-delay="3s" style="left: 27%; top: 72%;" data-video-type="camera">
+          <img class="preload" src="images/pull-view.png" alt="">
+        </div>
+        <div class="ani pull-down tofinal">
+          <img class="preload" src="images/pull-down.gif">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--耳机1-->
+<div id="earphone1" class="page-container">
+  <div class="swiper-container swiper-earphone1">
+    <div class="swiper-wrapper">
+      <!--   空白页    -->
+      <div class="swiper-slide"></div>
+      <!--   索尼耳机   -->
+      <div class="swiper-slide">
+        <div class="ani logo" swiper-animate-effect="fadeIn" swiper-animate-duration="0.1s"
+             swiper-animate-delay="1.5s">
+          <img src="images/pull-left.png" alt="" class="preload naviclose" data-close-to="product1">
+          <!--          <img src="images/logo.png" alt="" class="preload">-->
+          <img src="images/pull-share.png" alt="" class="preload navishare" data-product-type="earphone1">
+        </div>
+        <div class="ani earphone-bg wholepage" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s">
+          <img class="preload" src="images/earphone-bg.png" alt="">
+        </div>
+        <div class="ani earphone-slogan wholepage" swiper-animate-effect="slideInRight" swiper-animate-duration="0.5s"
+             swiper-animate-delay="1s">
+          <img class="preload" src="images/earphone-phone.png" alt="">
+        </div>
+        <div class="ani earphone-slogan wholepage" swiper-animate-effect="slideInLeft" swiper-animate-duration="0.5s"
+             swiper-animate-delay="1s">
+          <img class="preload" src="images/earphone-earphone.png" alt="">
+        </div>
+        <div class="ani earphone-slogan wholepage" swiper-animate-effect="slideInRight" swiper-animate-duration="1.5s"
+             swiper-animate-delay="1.5s">
+          <img class="preload" src="images/earphone-text.png" alt="">
+        </div>
+        <div class="ani pull-detail" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s"
+             swiper-animate-delay="3s" style="top: 40%;left: 10%;" data-product-id="A2_1">
+          <img class="preload" src="images/pull-detail.png" alt="">
+        </div>
+        <div class="ani pull-detail" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s"
+             swiper-animate-delay="3s" style="top: 72%;left: 20%;" data-product-id="A2——2">
+          <img class="preload" src="images/pull-detail.png" alt="">
+        </div>
+        <div class="ani pull-view" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s"
+             swiper-animate-delay="3s" style="left: 20%; top: 78%;" data-video-type="earphone">
+          <img class="preload" src="images/pull-view.png" alt="">
+        </div>
+        <div class="ani pull-down tofinal">
+          <img class="preload" src="images/pull-down.gif">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--蓝牙1-->
+<div id="bluetooth1" class="page-container">
+  <div class="swiper-container swiper-bluetooth1">
+    <div class="swiper-wrapper">
+      <!--   空白页    -->
+      <div class="swiper-slide"></div>
+      <!--   蓝牙耳机   -->
+      <div class="swiper-slide">
+        <div class="ani logo" swiper-animate-effect="fadeIn" swiper-animate-duration="0.1s"
+             swiper-animate-delay="1.5s">
+          <img src="images/pull-left.png" alt="" class="preload naviclose" data-close-to="product1">
+          <!--          <img src="images/logo.png" alt="" class="preload">-->
+          <img src="images/pull-share.png" alt="" class="preload navishare" data-product-type="bluetooth1">
+        </div>
+        <div class="ani bluetooth-bg wholepage" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s">
+          <img class="preload" src="images/bluetooth-bg.png" alt="">
+        </div>
+        <div class="ani bluetooth-bg wholepage" swiper-animate-effect="slideInRight" swiper-animate-duration="0.5s"
+             swiper-animate-delay="1s">
+          <img class="preload" src="images/bluetooth-phone.png" alt="">
+        </div>
+        <div class="ani bluetooth-bg wholepage" swiper-animate-effect="slideInLeft" swiper-animate-duration="0.5s"
+             swiper-animate-delay="1s">
+          <img class="preload" src="images/bluetooth-bluetooth.png" alt="">
+        </div>
+        <div class="ani bluetooth-slogan wholepage" swiper-animate-effect="slideInRight" swiper-animate-duration="1.5s"
+             swiper-animate-delay="1.5s">
+          <img class="preload" src="images/bluetooth-slogan.png" alt="">
+        </div>
+        <div class="ani pull-detail" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s"
+             swiper-animate-delay="3s" style="top: 40%;left: 15%;" data-product-id="A3_1">
+          <img class="preload" src="images/pull-detail.png" alt="">
+        </div>
+        <div class="ani pull-detail" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s"
+             swiper-animate-delay="3s" style="top: 72%;left: 45%;" data-product-id="A3_2">
+          <img class="preload" src="images/pull-detail.png" alt="">
+        </div>
+        <div class="ani pull-view" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s"
+             swiper-animate-delay="3s" style="left: 45%; top: 78%;" data-video-type="bluetooth">
+          <img class="preload" src="images/pull-view.png" alt="">
+        </div>
+        <div class="ani pull-down tofinal">
+          <img class="preload" src="images/pull-down.gif">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--微单2-->
+<div id="camera2" class="page-container">
+  <div class="swiper-container swiper-camera2">
+    <div class="swiper-wrapper">
+      <!--   空白页    -->
+      <div class="swiper-slide"></div>
+      <!--   索尼微单   -->
+      <div class="swiper-slide">
+        <div class="ani logo" swiper-animate-effect="fadeIn" swiper-animate-duration="0.1s"
+             swiper-animate-delay="1.5s">
+          <img src="images/pull-left.png" alt="" class="preload naviclose" data-close-to="product2">
+          <!--          <img src="images/logo.png" alt="" class="preload">-->
+          <img src="images/pull-share.png" alt="" class="preload navishare" data-product-type="camera2">
+        </div>
+        <div class="ani page2bg1 wholepage" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s"
+             swiper-animate-delay="0.5s">
+          <img class="preload" src="images/camera-bg.png" alt="">
+        </div>
+        <div class="ani page2bg1 wholepage" swiper-animate-effect="slideInRight" swiper-animate-duration="0.5s"
+             swiper-animate-delay="1s">
+          <img class="preload" src="images/camera-phone2.png" alt="">
+        </div>
+        <div class="ani page2bg1 wholepage" swiper-animate-effect="slideInLeft" swiper-animate-duration="0.5s"
+             swiper-animate-delay="1s">
+          <img class="preload" src="images/camera-camera.png" alt="">
+        </div>
+        <div class="ani page2bg1 wholepage" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s"
+             swiper-animate-delay="1s">
+          <img class="preload" src="images/camera-product.png" alt="">
+        </div>
+        <div class="ani cameraslogan wholepage" swiper-animate-effect="slideInRight" swiper-animate-duration="1.5s"
+             swiper-animate-delay="1.5s">
+          <img class="preload" src="images/camera-text.png" alt="">
+        </div>
+        <div class="ani pull-detail" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s"
+             swiper-animate-delay="3s" style="top: 33%;left: 10%;" data-product-id="B1_1">
+          <img class="preload" src="images/pull-detail.png" alt="">
+        </div>
+        <div class="ani pull-detail" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s"
+             swiper-animate-delay="3s" style="top: 68%;left: 28%;" data-product-id="B1_2">
+          <img class="preload" src="images/pull-detail.png" alt="">
+        </div>
+        <div class="ani pull-down tofinal">
+          <img class="preload" src="images/pull-down.gif">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--耳机2-->
+<div id="earphone2" class="page-container">
+  <div class="swiper-container swiper-earphone2">
+    <div class="swiper-wrapper">
+      <!--   空白页    -->
+      <div class="swiper-slide"></div>
+      <!--   索尼耳机   -->
+      <div class="swiper-slide">
+        <div class="ani logo" swiper-animate-effect="fadeIn" swiper-animate-duration="0.1s"
+             swiper-animate-delay="1.5s">
+          <img src="images/pull-left.png" alt="" class="preload naviclose" data-close-to="product2">
+          <!--          <img src="images/logo.png" alt="" class="preload">-->
+          <img src="images/pull-share.png" alt="" class="preload navishare" data-product-type="earphone2">
+        </div>
+        <div class="ani earphone-bg wholepage" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s">
+          <img class="preload" src="images/earphone-bg.png" alt="">
+        </div>
+        <div class="ani earphone-slogan wholepage" swiper-animate-effect="slideInRight" swiper-animate-duration="0.5s"
+             swiper-animate-delay="1s">
+          <img class="preload" src="images/earphone-phone2.png" alt="">
+        </div>
+        <div class="ani earphone-slogan wholepage" swiper-animate-effect="slideInLeft" swiper-animate-duration="0.5s"
+             swiper-animate-delay="1s">
+          <img class="preload" src="images/earphone-earphone.png" alt="">
+        </div>
+        <div class="ani earphone-slogan wholepage" swiper-animate-effect="slideInRight" swiper-animate-duration="1.5s"
+             swiper-animate-delay="1.5s">
+          <img class="preload" src="images/earphone-text.png" alt="">
+        </div>
+        <div class="ani pull-detail" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s"
+             swiper-animate-delay="3s" style="top: 40%;left: 10%;" data-product-id="B2_1">
+          <img class="preload" src="images/pull-detail.png" alt="">
+        </div>
+        <div class="ani pull-detail" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s"
+             swiper-animate-delay="3s" style="top: 72%;left: 20%;" data-product-id="B2_2">
+          <img class="preload" src="images/pull-detail.png" alt="">
+        </div>
+        <div class="ani pull-down tofinal">
+          <img class="preload" src="images/pull-down.gif">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--蓝牙2-->
+<div id="bluetooth2" class="page-container">
+  <div class="swiper-container swiper-bluetooth2">
+    <div class="swiper-wrapper">
+      <!--   空白页    -->
+      <div class="swiper-slide"></div>
+      <!--   蓝牙耳机   -->
+      <div class="swiper-slide">
+        <div class="ani logo" swiper-animate-effect="fadeIn" swiper-animate-duration="0.1s"
+             swiper-animate-delay="1.5s">
+          <img src="images/pull-left.png" alt="" class="preload naviclose" data-close-to="product2">
+          <!--          <img src="images/logo.png" alt="" class="preload">-->
+          <img src="images/pull-share.png" alt="" class="preload navishare" data-product-type="bluetooth2">
+        </div>
+        <div class="ani bluetooth-bg wholepage" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s">
+          <img class="preload" src="images/bluetooth-bg.png" alt="">
+        </div>
+        <div class="ani bluetooth-bg wholepage" swiper-animate-effect="slideInRight" swiper-animate-duration="0.5s"
+             swiper-animate-delay="1s">
+          <img class="preload" src="images/bluetooth-phone2.png" alt="">
+        </div>
+        <div class="ani bluetooth-bg wholepage" swiper-animate-effect="slideInLeft" swiper-animate-duration="0.5s"
+             swiper-animate-delay="1s">
+          <img class="preload" src="images/bluetooth-bluetooth.png" alt="">
+        </div>
+        <div class="ani bluetooth-slogan wholepage" swiper-animate-effect="slideInRight" swiper-animate-duration="1.5s"
+             swiper-animate-delay="1.5s">
+          <img class="preload" src="images/bluetooth-slogan.png" alt="">
+        </div>
+        <div class="ani pull-detail" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s"
+             swiper-animate-delay="3s" style="top: 40%;left: 15%;" data-product-id="B3_1">
+          <img class="preload" src="images/pull-detail.png" alt="">
+        </div>
+        <div class="ani pull-detail" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s"
+             swiper-animate-delay="3s" style="top: 72%;left: 45%;" data-product-id="B3_2">
+          <img class="preload" src="images/pull-detail.png" alt="">
+        </div>
+        <div class="ani pull-down tofinal">
+          <img class="preload" src="images/pull-down.gif">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--最终圣诞页-->
+<div id="final" class="page-container">
+  <div class="swiper-container swiper-final">
+    <div class="swiper-wrapper">
+      <!--   空白页    -->
+      <div class="swiper-slide"></div>
+      <!--   手机页   -->
+      <div class="swiper-slide swiper-no-swiping">
+        <div class="ani logo" swiper-animate-effect="fadeIn" swiper-animate-duration="0.1s"
+             swiper-animate-delay="1.5s">
+          <img src="images/pull-refresh.png" alt="" class="preload navirefresh">
+          <div></div>
+          <img src="images/pull-share.png" alt="" class="preload navishare" data-product-type="final"
+               style="margin-right: -1.4rem">
+        </div>
+        <!--    大背景    -->
+        <div class="ani christmastree-bg wholepage" swiper-animate-effect="fadeIn" swiper-animate-duration="1s">
+          <img class="preload" src="images/final-bg.png" alt="">
+        </div>
+        <!--    前景    -->
+        <div class="ani christmastree-snow wholepage" swiper-animate-effect="fadeIn"
+             swiper-animate-duration="1.8s"
+             swiper-animate-delay="1s">
+          <img class="preload" src="images/final-tree.png" alt="">
+        </div>
+        <!--    文字    -->
+        <div class="ani christmastree-snow wholepage" swiper-animate-effect="fadeIn"
+             swiper-animate-duration="1.2s"
+             swiper-animate-delay="2s">
+          <img class="preload" src="images/final-text.png" alt="">
+        </div>
+        <!--   大雪片        -->
+        <div class="christmastree-snow1">
+          <img class="preload" src="images/christmastree-snow1.png" alt="">
+        </div>
+        <!--   小雪片        -->
+        <div class="christmastree-snow2">
+          <img class="preload" src="images/christmastree-snow2.png" alt="">
+        </div>
+        <!--        &lt;!&ndash;    大背景    &ndash;&gt;-->
+        <!--        <div class="ani christmastree-bg wholepage" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s">-->
+        <!--          <img class="preload" src="images/christmastree-bg.png" alt="">-->
+        <!--        </div>-->
+        <!--        &lt;!&ndash;    飘雪    &ndash;&gt;-->
+        <!--        <div class="ani christmastree-snow wholepage" swiper-animate-effect="slideInRight"-->
+        <!--             swiper-animate-duration="0.5s"-->
+        <!--             swiper-animate-delay="0.5s">-->
+        <!--          <img class="preload" src="images/christmastree-snow.png" alt="">-->
+        <!--        </div>-->
+        <!--        &lt;!&ndash;    右手机    &ndash;&gt;-->
+        <!--        <div class="ani phone-right wholepage" swiper-animate-effect="slideInRight" swiper-animate-duration="0.5s"-->
+        <!--             swiper-animate-delay="0.5s">-->
+        <!--          <img class="preload" src="images/phone-right.png" alt="">-->
+        <!--        </div>-->
+        <!--        &lt;!&ndash;    左手机    &ndash;&gt;-->
+        <!--        <div class="ani phone-left wholepage" swiper-animate-effect="slideInRight" swiper-animate-duration="0.5s"-->
+        <!--             swiper-animate-delay="0.5s">-->
+        <!--          <img class="preload" src="images/phone-left.png" alt="">-->
+        <!--        </div>-->
+        <!--        &lt;!&ndash;    右面圣诞树    &ndash;&gt;-->
+        <!--        <div class="ani christmastree-right wholepage" swiper-animate-effect="slideInRight"-->
+        <!--             swiper-animate-duration="0.5s"-->
+        <!--             swiper-animate-delay="0.5s">-->
+        <!--          <img class="preload" src="images/christmastree-right.png" alt="">-->
+        <!--        </div>-->
+        <!--        &lt;!&ndash;    左面圣诞树    &ndash;&gt;-->
+        <!--        <div class="ani christmastree-left wholepage" swiper-animate-effect="fadeInRight"-->
+        <!--             swiper-animate-duration="0.5s"-->
+        <!--             swiper-animate-delay="0.5s">-->
+        <!--          <img class="preload" src="images/christmastree-left.png" alt="">-->
+        <!--        </div>-->
+        <!--        &lt;!&ndash;    圣诞标语    &ndash;&gt;-->
+        <!--        <div class="ani christmastree-text wholepage" swiper-animate-effect="fadeInBottom"-->
+        <!--             swiper-animate-duration="0.5s"-->
+        <!--             swiper-animate-delay="0.5s">-->
+        <!--          <img class="preload" src="images/christmastree-text.png" alt="">-->
+        <!--        </div>-->
+        <!--        &lt;!&ndash;    手机标语   &ndash;&gt;-->
+        <!--        <div class="ani phone-slogan wholepage" swiper-animate-effect="slideInRight" swiper-animate-duration="0.5s"-->
+        <!--             swiper-animate-delay="0.5s">-->
+        <!--          <img class="preload" src="images/phone-slogan.png" alt="">-->
+        <!--        </div>-->
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="media-container">
+  <div class="media-wrapper">
+    <video src="media/all.mp4"
+           id="video-all"
+           webkit-playsinline="true"
+           playsinline="true"
+           x-webkit-airplay="allow"
+           width="80%"
+           x5-video-player-type="h5"
+           x5-video-player-fullscreen="true"
+           x5-video-orientation="portraint"
+           type="video/mp4"
+           controls="controls"
+           style="object-fit: fill; display: none"
+           preload="meta"
+    ></video>
+    <video src="media/xperia-bluetooth.mp4"
+           id="video-bluetooth"
+           webkit-playsinline="true"
+           playsinline="true"
+           x-webkit-airplay="allow"
+           width="80%"
+           x5-video-player-type="h5"
+           x5-video-player-fullscreen="true"
+           x5-video-orientation="portraint"
+           type="video/mp4"
+           controls="controls"
+           style="object-fit: fill; display: none"
+           preload="meta"
+    ></video>
+    <video src="media/xperia-earphone.mp4"
+           id="video-earphone"
+           webkit-playsinline="true"
+           playsinline="true"
+           x-webkit-airplay="allow"
+           width="80%"
+           x5-video-player-type="h5"
+           x5-video-player-fullscreen="true"
+           x5-video-orientation="portraint"
+           type="video/mp4"
+           controls="controls"
+           style="object-fit: fill; display: none"
+           preload="meta"
+    ></video>
+    <video src="media/xperia-camera.mp4"
+           id="video-camera"
+           webkit-playsinline="true"
+           playsinline="true"
+           x-webkit-airplay="allow"
+           width="80%"
+           x5-video-player-type="h5"
+           x5-video-player-fullscreen="true"
+           x5-video-orientation="portraint"
+           type="video/mp4"
+           controls="controls"
+           style="object-fit: fill; display: none"
+           preload="meta"
+    ></video>
+    <div class="video-close">X</div>
+  </div>
+</div>
+
+<!-- 分享页 -->
+<div class="share-shotscreen"></div>
+<div class="share-container">
+  <div class="share-wrapper">
+    <img src="images/camera1-banner.png" id="share-camera1" class="preload hide share-image">
+    <img src="images/camera2-banner.png" id="share-camera2" class="preload hide share-image">
+    <img src="images/bluetooth1-banner.png" id="share-bluetooth1" class="preload hide share-image">
+    <img src="images/bluetooth2-banner.png" id="share-bluetooth2" class="preload hide share-image">
+    <img src="images/earphone1-banner.png" id="share-earphone1" class="preload hide share-image">
+    <img src="images/earphone2-banner.png" id="share-earphone2" class="preload hide share-image">
+    <img src="images/final-banner.png" id="share-final" class="preload hide share-image">
+
+    <div class="share-close">X</div>
+  </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/swiper.animate.min.js"></script>
+<script src="js/resize.js"></script>
+<script src="js/preload.js"></script>
+<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+<script type="text/javascript" src="js/sendToken.js"></script>
+<script src="js/main.js"></script>
+
+<script type="text/javascript">window._satellite && window._satellite.pageBottom();</script>
+</body>
+</html>

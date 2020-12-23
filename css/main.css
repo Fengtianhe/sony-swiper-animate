@@ -1,0 +1,451 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.hide {
+    display: none;
+}
+
+.page-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    overflow: hidden;
+    background: #000;
+    padding-bottom: constant(safe-area-inset-bottom); /*兼容 IOS<11.2*/
+    padding-bottom: env(safe-area-inset-bottom); /*兼容 IOS>11.2*/
+}
+
+/* 解决IphoneX */
+@media screen and (width: 375px) and (height: 812px) {
+    .button {
+        padding-bottom: 34px;
+    }
+}
+
+.index-up {
+    z-index: 99;
+}
+
+.page-container .swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+/*进度加载页面*/
+#loadingbg {
+    background: #000;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+}
+
+.page-container#loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../images/loding.gif") no-repeat center;
+    -moz-background-size: 100% auto;
+    background-size: 100% auto;
+    z-index: 10;
+}
+
+.page-container#loading img.loading {
+    width: 100%;
+}
+
+.page-container#loading .percent {
+    color: #fff;
+    vertical-align: bottom;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1.5rem;
+}
+
+.logo .naviback {
+    margin-left: -2rem;
+}
+
+.logo .naviclose {
+    margin-left: -2rem;
+}
+
+.logo .navirefresh {
+    margin-left: -1.5rem;
+    width: 0.4rem;
+}
+
+.logo div, .logo .navishare {
+    margin-right: -2rem;
+}
+
+.swiper-container .logo {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    right: 0;
+    left: 0;
+    justify-content: space-around;
+}
+
+.unit {
+    color: #c75a16;
+    font-size: 50%;
+}
+
+.pull-down {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#prod .click {
+    position: absolute;
+    font-size: 0.20rem;
+    color: #fff;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#prod .click img {
+    width: 2rem;
+    height: 2rem;
+}
+
+#prod .click1 {
+    top: 27%;
+    left: 22%;
+}
+
+#prod .click2 {
+    top: 18%;
+    left: 53%;
+}
+
+
+#product1 .click, #product2 .click {
+    position: absolute;
+    font-size: 0.06rem;
+    color: #fff;
+    z-index: 5;
+}
+
+#product1 .click1, #product2 .click1 {
+    top: 20%;
+    left: 10%;
+}
+
+#product1 .click2, #product2 .click2 {
+    top: 34%;
+    left: 60%;
+}
+
+#product1 .click3, #product2 .click3 {
+    top: 53%;
+    left: 69%;
+}
+
+#product1 .click4, #product2 .click4 {
+    top: 84%;
+    left: 6%;
+}
+
+.wholepage {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.slogan {
+    position: absolute;
+    top: 2.6rem;
+    left: 3rem;
+}
+
+.slogan1 {
+    position: absolute;
+    top: 63%;
+    bottom: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.wholepage img {
+    width: 100%;
+    height: 100%;
+}
+
+.media-container {
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.media-wrapper {
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.video-close {
+    position: absolute;
+    top: 1%;
+    right: 14%;
+    font-size: 0.3rem;
+    color: #fff;
+    /*background: rgba(0, 0, 0, 0.3);*/
+    /*border-radius: 0.05rem;*/
+    /*width: 1rem;*/
+    /*box-shadow: 5px 5px 5px #ccc;*/
+}
+
+.pull-detail, .pull-view {
+    position: absolute;
+    width: 1.5rem;
+}
+
+.pull-detail img, .pull-view img {
+    width: 100%;
+}
+
+.phone-border {
+    -webkit-animation: pulsate-bck-data-v-5d0fe741 .5s ease-in-out infinite both;
+    animation: pulsate-bck-data-v-5d0fe741 .5s ease-in-out infinite both;
+}
+
+/* 商品页点击提示语 */
+#product1 .tip, #product2 .tip {
+    position: absolute;
+    color: #fff;
+    font-size: 0.4rem;
+    z-index: 2;
+}
+
+#product1 .tip {
+    top: 54%;
+    left: 45%;
+}
+
+#product2 .tip {
+    top: 53%;
+    left: 40%;
+}
+
+/* 产品页播放按钮 */
+#product1 .click-phone img, #product2 .click-phone img {
+    width: 0.8rem;
+}
+
+/* 脉冲图片 */
+.click-image {
+    width: 2rem;
+    height: 2rem;
+    -webkit-animation: pulsate 1.5s ease-in-out infinite both;
+    animation: pulsate 1.5s ease-in-out infinite both;
+}
+
+@-moz-keyframes pulsate {
+    0% {
+        -webkit-transform: scale(0.1, 0.1);
+        -moz-transform: scale(0.1, 0.1);
+        -o-transform: scale(0.1, 0.1);
+        -ms-transform: scale(0.1, 0.1);
+        transform: scale(0.1, 0.1);
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+    }
+    50% {
+        opacity: 1;
+        -ms-filter: none;
+        filter: none;
+    }
+    100% {
+        -webkit-transform: scale(1.2, 1.2);
+        -moz-transform: scale(1.2, 1.2);
+        -o-transform: scale(1.2, 1.2);
+        -ms-transform: scale(1.2, 1.2);
+        transform: scale(1.2, 1.2);
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+    }
+}
+
+@-webkit-keyframes pulsate {
+    0% {
+        -webkit-transform: scale(0.1, 0.1);
+        -moz-transform: scale(0.1, 0.1);
+        -o-transform: scale(0.1, 0.1);
+        -ms-transform: scale(0.1, 0.1);
+        transform: scale(0.1, 0.1);
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+    }
+    50% {
+        opacity: 1;
+        -ms-filter: none;
+        filter: none;
+    }
+    100% {
+        -webkit-transform: scale(1.2, 1.2);
+        -moz-transform: scale(1.2, 1.2);
+        -o-transform: scale(1.2, 1.2);
+        -ms-transform: scale(1.2, 1.2);
+        transform: scale(1.2, 1.2);
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+    }
+}
+
+@-o-keyframes pulsate {
+    0% {
+        -webkit-transform: scale(0.1, 0.1);
+        -moz-transform: scale(0.1, 0.1);
+        -o-transform: scale(0.1, 0.1);
+        -ms-transform: scale(0.1, 0.1);
+        transform: scale(0.1, 0.1);
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+    }
+    50% {
+        opacity: 1;
+        -ms-filter: none;
+        filter: none;
+    }
+    100% {
+        -webkit-transform: scale(1.2, 1.2);
+        -moz-transform: scale(1.2, 1.2);
+        -o-transform: scale(1.2, 1.2);
+        -ms-transform: scale(1.2, 1.2);
+        transform: scale(1.2, 1.2);
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+    }
+}
+
+@keyframes pulsate {
+    0% {
+        -webkit-transform: scale(0.1, 0.1);
+        -moz-transform: scale(0.1, 0.1);
+        -o-transform: scale(0.1, 0.1);
+        -ms-transform: scale(0.1, 0.1);
+        transform: scale(0.1, 0.1);
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+    }
+    50% {
+        opacity: 1;
+        -ms-filter: none;
+        filter: none;
+    }
+    100% {
+        -webkit-transform: scale(1.2, 1.2);
+        -moz-transform: scale(1.2, 1.2);
+        -o-transform: scale(1.2, 1.2);
+        -ms-transform: scale(1.2, 1.2);
+        transform: scale(1.2, 1.2);
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+    }
+}
+
+/* 雪花摆动 */
+.christmastree-snow1, .christmastree-snow2 {
+    position: absolute;
+    animation: twslider 4s infinite linear;
+    -webkit-animation: twslider 4s infinite linear;;
+}
+
+.christmastree-snow1 {
+    transform-origin: top center;
+    top: 24%;
+}
+
+.christmastree-snow2 {
+    transform-origin: bottom center;
+    bottom: 17%;
+    right: 15%;
+}
+
+@keyframes twslider {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(20deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-20deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* 分享图片效果 */
+.share-shotscreen {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+}
+
+.share-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.share-wrapper {
+    position: relative;
+}
+
+.share-close {
+    position: absolute;
+    top: 1%;
+    right: 6%;
+    font-size: 0.3rem;
+    color: #fff;
+}
